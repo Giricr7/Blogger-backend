@@ -7,7 +7,9 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin:process.env.CLIENT_URL
+  origin: 'https://mypersonalblogger.netlify.app/',
+  credentials:true,     
+  optionSuccessStatus:200
 }));
 app.use("/posts", require("./routes/postRoutes"));
 app.use("/user", require("./routes/authRoute"));
