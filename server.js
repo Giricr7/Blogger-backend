@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: 'https://mypersonalblogger.netlify.app/',
   credentials:true,     
   optionSuccessStatus:200
 }));
@@ -17,7 +17,7 @@ app.use("/user", require("./routes/authRoute"));
 const PORT = process.env.PORT || 5000;
 
 mongoose
-  .connect(process.env.mongoDB_URI || process.env.mongoDB_LOCAL, {
+  .connect("mongodb+srv://giriprasath:giri%40123@cluster0.tjcum.mongodb.net/BlogDB?retryWrites=true&w=majority" || process.env.mongoDB_LOCAL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: true,
