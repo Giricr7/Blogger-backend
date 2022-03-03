@@ -2,7 +2,6 @@ const router = require("express").Router();
 const Post = require("../models/postModel");
 
 router.get("/", (req, res) => {
-  console.log('connected')
   Post.find()
     .then((posts) => {
       res.json(posts);
