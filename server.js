@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: 'https://mypersonalblogger.netlify.app/',
+  origin: 'https://mypersonalblogger.netlify.app',
   credentials:true,     
   optionSuccessStatus:200
 }));
